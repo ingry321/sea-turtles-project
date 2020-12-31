@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-----fonts----->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!---favicon---->
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Favicon/site.webmanifest">
+    
+    <!---font awesome--->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    
+    <!---mobile nav icon--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <title>Sea Turtles - Donation</title>
+</head>
+
+    
+    
+    
+<body>
+    
+    <nav class="mob-nav">
+        
+            <a class="mob-active" href="donation.html">Donate</a>
+            <div id="mobLinks">
+                <a href="index.html">Home&nbsp; <i class="fas fa-home"></i></a>
+                <a href="species.html">Species</a>
+                <a href="threats.html">Threats</a>
+            </div>
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+    </nav> 
+    
+    <header class="header2"></header>
+    
+    <nav class="nav2">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="species.html">Species</a></li>
+                <li><a href="threats.html">Threats</a></li>
+                <li><a class="active"  href="donation.html">Donate</a></li>
+            </ul>
+    </nav>
+    
+    <!------------data---------------------------->
+    
+    <section class="main-structure">
+        <h2>Donation</h2>
+        
+        <section class="general-section">
+            <h4>Please Consider Donating!</h4>
+            <p>Each donation goes forward to helping conservation efforts of sea turtles.</p>
+            <form>
+                <fieldset class="main-fieldset">
+                    <div class="form-container">
+                        <h5 class="form-heading">Full Name &amp; Email</h5><hr>
+                            <div class="form-container-single">
+                                <label for="fname">First Name</label><br>
+                                <input type="text" id="fname" name="name" placeholder="John" required>
+                            </div>
+                        <div class="form-container-single">
+                            <label>Last Name</label><br>
+                            <input type="text" id="lname" name="name" placeholder="Doe" required>
+                        </div>
+                        <div class="form-container-single">
+                            <label for="email">Email</label><br>
+                            <input type="text" id="email" name="email" placeholder="example@example.com" required>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="amount-container">
+                        <h5 class="form-heading">Choose your amount</h5><hr>
+                        <label class="dono-amount">
+                            <input type="radio" name="dono-amount" value="5" checked="checked">
+                            <span>$5</span>
+                        </label>
+                        <label class="dono-amount">
+                            <input type="radio" name="dono-amount" value="10">
+                            <span>$10</span>
+                        </label>
+                        <label class="dono-amount">
+                            <input type="radio" name="dono-amount" value="25">
+                            <span>$25</span>
+                        </label>
+                        <label class="dono-amount">
+                            <input type="radio" name="dono-amount" value="50">
+                            <span>$50</span>
+                        </label>
+                        <label class="dono-amount">
+                            <input type="radio"  name="dono-amount" value="100">
+                            <span>$100</span>
+                        </label>
+                    </div>
+                        
+                    
+                    
+    
+                    
+                    <div class="payment-container"><h5 class="form-heading">Payment Method</h5><hr><br>
+                        
+                        <input type="radio" id="creditcard" name="payment" onclick="payDisplay()" required>
+                        <label for="creditcard">Credit Card</label><br>
+                        <input type="radio" id="paypal" name="payment" onclick="payDisplay()">
+                        <label for="paypal"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal" /></label><br><br>
+                    </div>
+                    
+                    <fieldset id="creditcardform">
+                        <h5 class="form-heading">Credit Card Payment</h5>
+                        <label for="fname">First Name</label><br>
+                        <input type="text" id="fname" name="cname" maxlength="30" placeholder="First Name" required><br>
+                        <label>Last Name</label><br>
+                        <input type="text" id="lname" name="cname" maxlength="30" placeholder="Last Name" required><br>
+                        <label>Credit Card number</label><br>
+                        <input type="number" placeholder="**** **** **** ****" required><br>
+                        <label>Security Code</label><br>
+                        <input type="number" placeholder="CVV" required><br>
+                        <label>Card Expiration Date</label><br>
+                        <input type="number"  placeholder="MM/YY" required><br>
+                    </fieldset>
+                    
+                    <fieldset id="paypalform">
+                        <p>Please click one of the PayPal options to complete payment and submit the form.</p>
+                        
+                        <button class="paypal-btn">
+                                <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal" />
+                        </button>
+                    </fieldset>
+                    <br><input type="submit" id="submit">
+                </fieldset>
+            </form><br><br>
+        
+        
+        
+        
+        
+            <h3>References</h3>
+             <ul>
+                <li><a href="https://www.worldwildlife.org/species/sea-turtle">General info - worldwildlife.org</a></li>
+                <li><a href="https://seaworld.org/animals/facts/reptiles/sea-turtles/">Sea turtle facts - seaworld.org</a></li>
+                <li><a href="https://www.seeturtles.org/sea-turtle-species">Sea turtle species - seeturtles.org</a><br></li>
+                <li><a href="https://conserveturtles.org/information-sea-turtles-species-world/">Infromation on sea turtles species - conserveturtles.org</a></li>
+                <li><a href="https://www.wisesayings.com/turtle-quotes/page-2/">Home page turtle quote - wisesayings.com</a></li>
+            </ul>
+        </section>
+        
+    </section>
+    
+<!--------------footer---------------------------->   
+    
+     <footer>
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+    </footer>
+    
+</body>
+    
+</html>
